@@ -1,0 +1,26 @@
+{
+  "name": "profitandego_website",
+  "version": "1.0.0",
+  "description": "Welcome to the official repository for [profitandego.com](https://www.google.com/search?q=https://profitandego.com)!",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KnowOneActual/profitandego_website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KnowOneActual/profitandego_website/issues"
+  },
+  "homepage": "https://github.com/KnowOneActual/profitandego_website#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}

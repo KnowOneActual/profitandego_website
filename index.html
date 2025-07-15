@@ -3,108 +3,69 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://profitandego.com/" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="canonical" href="https://profitandego.com/">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
     <link rel="icon" type="image/webp" href="/img/favicon/favicon-32x32.webp" sizes="32x32">
     <link rel="icon" type="image/webp" href="/img/favicon/favicon-96x96.webp" sizes="96x96">
-    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/img/favicon/site.webmanifest" />
-    <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <title>EaaS | Ego as a Service | profitandego.com</title>
-
-    <!-- 
-      SECURITY HEADERS: These meta tags have been added to improve your site's security score.
-      They help protect against common web vulnerabilities like clickjacking and cross-site scripting (XSS).
-    -->
-
-    <!-- Tells browsers to only use HTTPS for this site, protecting against protocol downgrade attacks. -->
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-
-    <!-- 
-      Content Security Policy (CSP): This is a powerful tool to prevent XSS. 
-      It specifies which sources of content (scripts, styles, fonts) are allowed to be loaded.
-      This policy allows content from your own domain ('self') and the trusted CDNs for Google Fonts and Tailwind CSS.
-      'unsafe-inline' is needed for the custom styles in the <style> tag.
-    -->
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
-
-    <!-- Prevents your site from being embedded in an iframe on other sites, which helps stop clickjacking. -->
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-
-    <!-- Controls which browser features and APIs can be used on the page. Here, we're disabling a few potentially risky ones. -->
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-
-
-
-    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-
     <style>
-        /* Custom styles for animations and aesthetics */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: Inter, sans-serif
         }
 
-        /* Keyframe animation for the compliment text appearing */
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(10px);
+                transform: translateY(10px)
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0)
             }
         }
 
         .compliment-animation {
-            animation: fadeIn 0.5s ease-in-out forwards;
+            animation: fadeIn .5s ease-in-out forwards
         }
 
-        /* Subtle gradient animation for the background */
         @keyframes gradient-animation {
             0% {
-                background-position: 0% 50%;
+                background-position: 0 50%
             }
 
             50% {
-                background-position: 100% 50%;
+                background-position: 100% 50%
             }
 
             100% {
-                background-position: 0% 50%;
+                background-position: 0 50%
             }
         }
 
         .animated-gradient {
             background: linear-gradient(-45deg, #1f2937, #374151, #111827, #4b5563);
             background-size: 400% 400%;
-            animation: gradient-animation 15s ease infinite;
+            animation: gradient-animation 15s ease infinite
         }
     </style>
 </head>
 
 <body class="animated-gradient text-white">
-
     <div class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
-
-        <!-- Main Content Area -->
         <div class="w-full max-w-6xl text-center">
-
-            <!-- Header -->
             <header class="mb-8">
                 <div class="flex flex-col items-center">
-                    <!-- NEW SVG LOGO: Replaces the <img> tag -->
                     <svg class="h-16 w-auto mb-4" viewBox="0 0 120 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="10" y="30" width="15" height="10" rx="2" fill="white" />
                         <rect x="35" y="20" width="15" height="20" rx="2" fill="white" />
@@ -113,120 +74,113 @@
                             d="M85 25 L85 5 C85 2.23858 87.2386 0 90 0 L95 0 C97.7614 0 100 2.23858 100 5 L100 25 M85 25 L100 25 M85 25 L80 20 M85 25 L90 30"
                             stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">
-                        Ego as a Service
-                    </h1>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">Ego as a
+                        Service</h1>
                 </div>
                 <p class="mt-4 text-lg sm:text-xl text-gray-400">Because you're not just a professional, you're a
                     paradigm shift.</p>
             </header>
-
-            <!-- Validation Button -->
             <div class="my-10">
                 <button id="validateButton"
-                    class="w-full sm:w-auto bg-indigo-600 text-white font-bold text-lg sm:text-xl rounded-lg px-10 py-4 shadow-lg hover:bg-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300 transform hover:scale-105">
-                    Validate Me
-                </button>
+                    class="w-full sm:w-auto bg-indigo-600 text-white font-bold text-lg sm:text-xl rounded-lg px-10 py-4 shadow-lg hover:bg-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300 transform hover:scale-105">Validate
+                    Me</button>
             </div>
-
-            <!-- Compliment Display Area -->
             <div id="complimentContainer" class="min-h-[100px] flex items-center justify-center p-4">
                 <p id="complimentText" class="text-2xl sm:text-3xl font-medium text-gray-200 opacity-0"></p>
             </div>
-
-            <!-- Spacer -->
             <div class="my-12"></div>
-
-            <!-- Joke Pricing Tiers Section -->
             <section id="pricing-tiers">
                 <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-200">Choose Your Validation Velocity
                 </h2>
                 <p class="mt-2 text-md sm:text-lg text-gray-400">Scale your self-worth with our enterprise-grade
                     solutions.</p>
-
                 <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-                    <!-- Tier 1: Intern Plan -->
                     <div
                         class="bg-gray-800 bg-opacity-50 rounded-xl p-8 text-left flex flex-col border border-gray-700 shadow-xl">
                         <h3 class="text-2xl font-bold text-indigo-400">The Intern Plan</h3>
                         <p class="mt-1 text-gray-400">Free</p>
                         <ul class="mt-6 space-y-4 text-gray-300 flex-grow">
-                            <li class="flex items-start"><span
-                                    class="text-indigo-400 mr-3 mt-1">✔</span><span><strong>Daily Affirmation
-                                        Synergy:</strong> One buzzword-filled compliment via email each morning.</span>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 mt-1">✔</span>
+                                <span>
+                                    <strong>Daily Affirmation Synergy:</strong>One buzzword-filled compliment via email
+                                    each morning. </span>
                             </li>
-                            <li class="flex items-start"><span
-                                    class="text-indigo-400 mr-3 mt-1">✔</span><span><strong>The "Like" Bot:</strong>
-                                    Guarantees one AI-driven "like" on any social media post you link per day.</span>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 mt-1">✔</span>
+                                <span>
+                                    <strong>The "Like" Bot:</strong>Guarantees one AI-driven "like" on any social media
+                                    post you link per day. </span>
                             </li>
                         </ul>
                         <button
                             class="mt-8 w-full bg-gray-600 text-white font-bold py-3 rounded-lg cursor-not-allowed opacity-50">Synergize
                             Now</button>
                     </div>
-
-                    <!-- Tier 2: Manager Plan -->
                     <div
                         class="bg-gray-800 bg-opacity-80 rounded-xl p-8 text-left flex flex-col border-2 border-indigo-500 shadow-2xl transform scale-105">
                         <h3 class="text-2xl font-bold text-indigo-300">The Manager Plan</h3>
                         <p class="mt-1 text-gray-400">Standard</p>
                         <ul class="mt-6 space-y-4 text-gray-300 flex-grow">
-                            <li class="flex items-start"><span
-                                    class="text-indigo-400 mr-3 mt-1">✔</span><span><strong>On-Demand Praise
-                                        Generation:</strong> Dashboard to turn "made coffee" into a leadership
-                                    masterclass.</span></li>
-                            <li class="flex items-start"><span
-                                    class="text-indigo-400 mr-3 mt-1">✔</span><span><strong>LinkedIn Endorsement
-                                        Engine:</strong> Get plausible recommendations from "Visionary Steve."</span>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 mt-1">✔</span>
+                                <span>
+                                    <strong>On-Demand Praise Generation:</strong>Dashboard to turn "made coffee" into a
+                                    leadership masterclass. </span>
                             </li>
-                            <li class="flex items-start"><span
-                                    class="text-indigo-400 mr-3 mt-1">✔</span><span><strong>Meeting Contribution
-                                        Ghostwriter:</strong> Get three insightful-sounding questions to ask.</span>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 mt-1">✔</span>
+                                <span>
+                                    <strong>LinkedIn Endorsement Engine:</strong>Get plausible recommendations from
+                                    "Visionary Steve." </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 mt-1">✔</span>
+                                <span>
+                                    <strong>Meeting Contribution Ghostwriter:</strong>Get three insightful-sounding
+                                    questions to ask. </span>
                             </li>
                         </ul>
                         <button
                             class="mt-8 w-full bg-indigo-500 text-white font-bold py-3 rounded-lg cursor-not-allowed opacity-50">Leverage
                             Now</button>
                     </div>
-
-                    <!-- Tier 3: CEO Plan -->
                     <div
                         class="bg-gray-800 bg-opacity-50 rounded-xl p-8 text-left flex flex-col border border-gray-700 shadow-xl">
                         <h3 class="text-2xl font-bold text-indigo-400">The CEO Plan</h3>
                         <p class="mt-1 text-gray-400">Premium</p>
                         <ul class="mt-6 space-y-4 text-gray-300 flex-grow">
-                            <li class="flex items-start"><span
-                                    class="text-indigo-400 mr-3 mt-1">✔</span><span><strong>Automated "Thought
-                                        Leadership":</strong> Generates a 500-word article proving your
-                                    expertise.</span></li>
-                            <li class="flex items-start"><span
-                                    class="text-indigo-400 mr-3 mt-1">✔</span><span><strong>The "Rival Roast"
-                                        Report:</strong> Re-frames competitors' successes as minor and
-                                    predictable.</span></li>
-                            <li class="flex items-start"><span
-                                    class="text-indigo-400 mr-3 mt-1">✔</span><span><strong>Personalized Stock
-                                        Ticker:</strong> A private webpage for "YOU, Inc." that only goes up.</span>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 mt-1">✔</span>
+                                <span>
+                                    <strong>Automated "Thought Leadership":</strong>Generates a 500-word article proving
+                                    your expertise. </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 mt-1">✔</span>
+                                <span>
+                                    <strong>The "Rival Roast" Report:</strong>Re-frames competitors' successes as minor
+                                    and predictable. </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 mt-1">✔</span>
+                                <span>
+                                    <strong>Personalized Stock Ticker:</strong>A private webpage for "YOU, Inc." that
+                                    only goes up. </span>
                             </li>
                         </ul>
                         <button
                             class="mt-8 w-full bg-gray-600 text-white font-bold py-3 rounded-lg cursor-not-allowed opacity-50">Actualize
                             Now</button>
                     </div>
-
                 </div>
             </section>
         </div>
-
-        <!-- Footer -->
         <footer class="w-full text-center text-gray-500 text-sm mt-16 pb-4">
             <p>&copy; 2024 profitandego.com - Disrupting insecurities, one click at a time.</p>
         </footer>
     </div>
-
-    <script src="script.js" defer></script>
-
+    <script src="script.js" defer="defer"></script>
 </body>
 
 </html>

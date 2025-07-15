@@ -4,17 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://profitandego.com/" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
-    <link rel="icon" type="image/webp" href="/img/favicon/favicon-32x32.webp" sizes="32x32">
-    <link rel="icon" type="image/webp" href="/img/favicon/favicon-96x96.webp" sizes="96x96">
-    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/img/favicon/site.webmanifest" />
-    <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
-    <title>EaaS | Ego as a Service | profitandego.com</title>
-
+    <title>Ego as a Service | profitandego.com</title>
 
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -79,15 +69,17 @@
 
             <!-- Header -->
             <header class="mb-8">
-                <!-- LOGO: Replace "your-logo-white.png" with the path to your actual logo file. -->
-                <!-- Ensure it's a white logo on a transparent background (PNG format is best). -->
-                <img src="/img/site_assets/5mJaFhq6YTnFYH*!tCMsayvUhXVJ*GhX$DAuXBBFT@7t.png" alt="Profit and Ego Logo"
-                    class="mx-auto h-14 w-auto mb-4"
-                    onerror="this.src='https://placehold.co/300x70/1f2937/ffffff?text=profitandego.com'; this.onerror=null;">
+                <!-- Logo and Title are now grouped in a flex container for better alignment -->
+                <div class="flex flex-col items-center space-y-4">
+                    <!-- Ensure your logo PNG is cropped tightly around the visible content -->
+                    <img src="/img/site_assets/5mJaFhq6YTnFYH*!tCMsayvUhXVJ*GhX$DAuXBBFT@7t.png"
+                        alt="Profit and Ego Logo" class="h-12 w-auto"
+                        onerror="this.src='https://placehold.co/300x60/1f2937/ffffff?text=profitandego.com'; this.onerror=null;">
 
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">Ego as a Service
-                </h1>
-                <p class="mt-2 text-lg sm:text-xl text-gray-400">Because you're not just a professional, you're a
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">Ego as a
+                        Service</h1>
+                </div>
+                <p class="mt-4 text-lg sm:text-xl text-gray-400">Because you're not just a professional, you're a
                     paradigm shift.</p>
             </header>
 

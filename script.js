@@ -1,9 +1,12 @@
 // --- DOM Elements ---
 const validateButton = document.getElementById('validateButton');
 const complimentText = document.getElementById('complimentText');
-const complimentContainer = document.getElementById('complimentContainer');
 
-// --- Loading Messages Array ---
+// --- State Variables ---
+let hasBeenClicked = false;
+let isAnimating = false; // Flag to prevent rapid clicks from breaking the animation
+
+// --- Compliments & Loading Messages ---
 const loadingMessages = [
     "Synergizing compliments...",
     "Leveraging linguistic assets...",
@@ -14,7 +17,6 @@ const loadingMessages = [
     "Pivoting to praise..."
 ];
 
-// --- Compliments Array ---
 const compliments = [
     "Your Q4 projections are the stuff of legend.",
     "You don't just think outside the box; you own the box factory.",
@@ -31,38 +33,41 @@ const compliments = [
     "They don't see your genius yet. Give them time."
 ];
 
-let hasBeenClicked = false;
-
-// --- Helper function to fade text in and out ---
-function updateAndAnimateText(newText) {
-    // Fade out
-    complimentText.style.opacity = '0';
-    complimentText.classList.remove('compliment-animation');
-
-    // Wait for fade out, then update text and fade in
-    setTimeout(() => {
-        complimentText.textContent = newText;
-        complimentText.style.opacity = '1';
-        complimentText.classList.add('compliment-animation');
-    }, 200); // A brief delay for a smooth transition
-}
-
-
-// --- Event Listener ---
+// --- The Main Function ---
 validateButton.addEventListener('click', () => {
-    // 1. Select and display a random loading message
+    // 1. If an animation is already running, do nothing.
+    if (isAnimating) {
+        return;
+    }
+    isAnimating = true;
+
+    // 2. Select a random loading message and compliment
     const randomLoadingMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
-    updateAndAnimateText(randomLoadingMessage);
+    const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
 
+    // 3. Fade out the current text
+    complimentText.style.opacity = '0';
 
-    // 2. After a delay, select and display the real compliment
+    // 4. After a short delay (for the fade-out to finish), show the loading message
     setTimeout(() => {
-        const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
-        updateAndAnimateText(randomCompliment);
-    }, 1500); // 1.5-second delay to show the loading message
+        complimentText.textContent = randomLoadingMessage;
+        complimentText.classList.add('compliment-animation');
+        complimentText.style.opacity = '1';
+    }, 300); // 0.3-second delay
 
+    // 5. After the loading message has been visible for a bit, fade it out
+    setTimeout(() => {
+        complimentText.style.opacity = '0';
+    }, 2000); // 2-second delay
 
-    // 3. Update button text after the first click
+    // 6. After the loading message fades out, show the final compliment
+    setTimeout(() => {
+        complimentText.textContent = randomCompliment;
+        complimentText.style.opacity = '1';
+        isAnimating = false; // The animation is complete, allow clicks again
+    }, 2300); // This must be longer than the previous delay
+
+    // 7. Update button text only on the first click
     if (!hasBeenClicked) {
         validateButton.textContent = 'Validate Me Again';
         hasBeenClicked = true;

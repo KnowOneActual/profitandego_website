@@ -2,18 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://profitandego.com/" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
-    <link rel="icon" type="image/webp" href="/img/favicon/favicon-32x32.webp" sizes="32x32">
-    <link rel="icon" type="image/webp" href="/img/favicon/favicon-96x96.webp" sizes="96x96">
-    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/img/favicon/site.webmanifest" />
-    <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
-    <title>EaaS | Ego as a Service | profitandego.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://profitandego.com/" />
+<link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+<link rel="icon" type="image/webp" href="/img/favicon/favicon-32x32.webp" sizes="32x32">
+<link rel="icon" type="image/webp" href="/img/favicon/favicon-96x96.webp" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/img/favicon/site.webmanifest" />
+<link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+<title>EaaS | Ego as a Service | profitandego.com</title>
+
+    <!-- 
+      SECURITY HEADERS: These meta tags have been added to improve your site's security score.
+      They help protect against common web vulnerabilities like clickjacking and cross-site scripting (XSS).
+    -->
+
+    <!-- Tells browsers to only use HTTPS for this site, protecting against protocol downgrade attacks. -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
+    <!-- 
+      Content Security Policy (CSP): This is a powerful tool to prevent XSS. 
+      It specifies which sources of content (scripts, styles, fonts) are allowed to be loaded.
+      This policy allows content from your own domain ('self') and the trusted CDNs for Google Fonts and Tailwind CSS.
+    -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+
+    <!-- Prevents your site from being embedded in an iframe on other sites, which helps stop clickjacking. -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <!-- Controls which browser features and APIs can be used on the page. Here, we're disabling a few potentially risky ones. -->
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+
+
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -65,8 +91,6 @@
             background-size: 400% 400%;
             animation: gradient-animation 15s ease infinite;
         }
-
-        /* The .logo-header class has been removed as it's no longer needed. */
     </style>
 </head>
 
@@ -79,10 +103,6 @@
 
             <!-- Header -->
             <header class="mb-8">
-                <!-- 
-                  FIX: The logo and headline are now separate elements inside a flex container.
-                  This provides reliable stacking and spacing.
-                -->
                 <div class="flex flex-col items-center">
                     <img src="/img/site_assets/5mJaFhq6YTnFYH*!tCMsayvUhXVJ*GhX$DAuXBBFT@7t.png"
                         alt="Profit and Ego Logo" class="h-16 w-auto mb-4" onerror="this.style.display='none'">

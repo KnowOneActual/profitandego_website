@@ -1,11 +1,4 @@
 
-<svg viewBox="0 0 120 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="30" width="15" height="10" rx="2" fill="white"/>
-  <rect x="35" y="20" width="15" height="20" rx="2" fill="white"/>
-  <rect x="60" y="10" width="15" height="30" rx="2" fill="white"/>
-  <path d="M85 25 L85 5 C85 2.23858 87.2386 0 90 0 L95 0 C97.7614 0 100 2.23858 100 5 L100 25 M85 25 L100 25 M85 25 L80 20 M85 25 L90 30" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
 # profitandego.com
 
 Welcome to the official repository for [profitandego.com](https://www.google.com/search?q=https://profitandego.com)!

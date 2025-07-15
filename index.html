@@ -66,24 +66,7 @@
             animation: gradient-animation 15s ease infinite;
         }
 
-        /* --- NEW: Logo as Background --- */
-        .logo-header {
-            /* Set your logo as the background image */
-            background-image: url('/img/site_assets/5mJaFhq6YTnFYH*!tCMsayvUhXVJ*GhX$DAuXBBFT@7t.png');
-            background-repeat: no-repeat;
-            background-position: center top;
-            /* Position it at the top-center */
-            background-size: contain;
-            /* Ensure it fits without being cut off */
-
-            /* Add padding to the top to make space for the logo */
-            padding-top: 100px;
-            /* Adjust this value as needed */
-
-            /* Set a max-height for the background image area */
-            height: 200px;
-            /* Adjust this value as needed */
-        }
+        /* The .logo-header class has been removed as it's no longer needed. */
     </style>
 </head>
 
@@ -97,12 +80,17 @@
             <!-- Header -->
             <header class="mb-8">
                 <!-- 
-                  The <img> tag has been removed. The logo is now a background
-                  on the h1 element below, controlled by the .logo-header class.
+                  FIX: The logo and headline are now separate elements inside a flex container.
+                  This provides reliable stacking and spacing.
                 -->
-                <h1 class="logo-header text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">
-                    Ego as a Service
-                </h1>
+                <div class="flex flex-col items-center">
+                    <img src="/img/site_assets/5mJaFhq6YTnFYH*!tCMsayvUhXVJ*GhX$DAuXBBFT@7t.png"
+                        alt="Profit and Ego Logo" class="h-16 w-auto mb-4" onerror="this.style.display='none'">
+
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">
+                        Ego as a Service
+                    </h1>
+                </div>
                 <p class="mt-4 text-lg sm:text-xl text-gray-400">Because you're not just a professional, you're a
                     paradigm shift.</p>
             </header>

@@ -14,7 +14,6 @@
     <link rel="manifest" href="/img/favicon/site.webmanifest" />
     <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
     <title>EaaS | Ego as a Service | profitandego.com</title>
-
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -66,6 +65,25 @@
             background-size: 400% 400%;
             animation: gradient-animation 15s ease infinite;
         }
+
+        /* --- NEW: Logo as Background --- */
+        .logo-header {
+            /* Set your logo as the background image */
+            background-image: url('/img/site_assets/5mJaFhq6YTnFYH*!tCMsayvUhXVJ*GhX$DAuXBBFT@7t.png');
+            background-repeat: no-repeat;
+            background-position: center top;
+            /* Position it at the top-center */
+            background-size: contain;
+            /* Ensure it fits without being cut off */
+
+            /* Add padding to the top to make space for the logo */
+            padding-top: 100px;
+            /* Adjust this value as needed */
+
+            /* Set a max-height for the background image area */
+            height: 200px;
+            /* Adjust this value as needed */
+        }
     </style>
 </head>
 
@@ -78,19 +96,13 @@
 
             <!-- Header -->
             <header class="mb-8">
-                <!-- Logo and Title Group -->
-                <div class="flex flex-col items-center">
-                    <!-- 
-                      Final Fix: The key is to re-crop your PNG file to be tight around the logo content.
-                      These classes will help control the final result.
-                    -->
-                    <img src="/img/site_assets/5mJaFhq6YTnFYH*!tCMsayvUhXVJ*GhX$DAuXBBFT@7t.png"
-                        alt="Profit and Ego Logo" class="h-14 sm:h-16 w-auto max-w-[320px] mb-2"
-                        onerror="this.src='https://placehold.co/320x80/1f2937/ffffff?text=profitandego.com'; this.onerror=null;">
-
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">Ego as a
-                        Service</h1>
-                </div>
+                <!-- 
+                  The <img> tag has been removed. The logo is now a background
+                  on the h1 element below, controlled by the .logo-header class.
+                -->
+                <h1 class="logo-header text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">
+                    Ego as a Service
+                </h1>
                 <p class="mt-4 text-lg sm:text-xl text-gray-400">Because you're not just a professional, you're a
                     paradigm shift.</p>
             </header>

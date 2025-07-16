@@ -33,17 +33,25 @@ validateButton.addEventListener('click', () => {
     // 1. Select a random compliment
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
 
-    // 2. Fade out the current text
+    // 2. Make sure the text is faded out
     complimentText.classList.remove('fade-in');
     complimentText.classList.add('fade-out');
 
-    // 3. After the fade-out is complete, change the text and fade it back in
+    // 3. After a tiny delay to ensure the fade-out class is applied...
     setTimeout(() => {
+        // ...change the content...
         complimentText.textContent = randomCompliment;
+
+        // ...and then fade it back in.
         complimentText.classList.remove('fade-out');
         complimentText.classList.add('fade-in');
-        isAnimating = false; // Animation is complete
-    }, 400); // This delay must match your CSS transition time
+
+        // Allow clicks again once the animation is fully complete
+        setTimeout(() => {
+            isAnimating = false;
+        }, 400); // This must match the CSS transition time
+
+    }, 400); // This must match the CSS transition time
 
     // 4. Update button text only on the first click
     if (!hasBeenClicked) {

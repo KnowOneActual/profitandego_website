@@ -20,42 +20,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: Inter, sans-serif
-    }
-
-    /* Base style: The element is invisible */
-    #complimentText {
-        opacity: 0;
-        transition: opacity 0.4s ease-in-out;
-    }
-
-    /* This class makes the element visible */
-    #complimentText.is-visible {
-        opacity: 1;
-    }
-
-    @keyframes gradient-animation {
-        0% {
-            background-position: 0 50%
+    <style>
+        body {
+            font-family: Inter, sans-serif
         }
 
-        50% {
-            background-position: 100% 50%
+        /* Base style: The element is invisible */
+        #complimentText {
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
         }
 
-        100% {
-            background-position: 0 50%
+        /* This class makes the element visible */
+        #complimentText.is-visible {
+            opacity: 1;
         }
-    }
 
-    .animated-gradient {
-        background: linear-gradient(-45deg, #1f2937, #374151, #111827, #4b5563);
-        background-size: 400% 400%;
-        animation: gradient-animation 15s ease infinite
-    }
-</style>
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0 50%
+            }
+        }
+
+        .animated-gradient {
+            background: linear-gradient(-45deg, #1f2937, #374151, #111827, #4b5563);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite
+        }
+    </style>
 </head>
 
 <body class="animated-gradient text-white">
@@ -71,23 +71,26 @@
                             d="M85 25 L85 5 C85 2.23858 87.2386 0 90 0 L95 0 C97.7614 0 100 2.23858 100 5 L100 25 M85 25 L100 25 M85 25 L80 20 M85 25 L90 30"
                             stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">EaaS | Ego as a
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-gray-100">EaaS | Ego as
+                        a
                         Service</h1>
                 </div>
                 <p class="mt-4 text-lg sm:text-xl text-gray-400">Because you're not just a professional, you're a
                     paradigm shift.</p>
             </header>
+
             <div class="my-10 space-y-6">
                 <div class="flex justify-center items-center space-x-2">
                     <input type="checkbox" id="tosCheckbox"
                         class="h-5 w-5 rounded text-indigo-600 focus:ring-indigo-500 border-gray-300 bg-gray-700">
-                    <label for="tosCheckbox" class="text-gray-400">I have reviewed and synergized with the <a href="#" id="tosLink"
-                            class="text-indigo-400 hover:underline">Terms of Service</a>.</label>
+                    <label for="tosCheckbox" class="text-gray-400">I have reviewed and synergized with the <a href="#"
+                            id="tosLink" class="text-indigo-400 hover:underline">Terms of Service</a>.</label>
                 </div>
                 <button id="validateButton" disabled
                     class="w-full sm:w-auto bg-indigo-600 text-white font-bold text-lg sm:text-xl rounded-lg px-10 py-4 shadow-lg transition-all duration-300 transform hover:scale-105 opacity-50 cursor-not-allowed">Validate
                     Me</button>
             </div>
+
             <div id="complimentContainer" class="min-h-[100px] flex items-center justify-center p-4">
                 <p id="complimentText" class="text-2xl sm:text-3xl font-medium text-gray-200"></p>
             </div>
@@ -178,35 +181,93 @@
                     </a>
                 </div>
             </section>
+
+            <!-- Meet the Team Section -->
+            <section id="meet-the-team" class="my-16 pt-12 border-t border-gray-700">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-200">Meet the Visionaries</h2>
+                <p class="mt-2 text-md sm:text-lg text-gray-400">The minds behind the magnificence.</p>
+                <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <!-- Team Member 1 -->
+                    <div
+                        class="bg-gray-800 bg-opacity-50 rounded-xl p-6 text-center flex flex-col items-center border border-gray-700 shadow-xl">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-500 object-cover"
+                            src="https://i.pravatar.cc/300?u=jaxonvalor" alt="Photo of Jaxon Valor"
+                            onerror="this.onerror=null;this.src='https://placehold.co/300x300/374151/FFFFFF?text=JV';">
+                        <h3 class="text-xl font-bold text-white">Jaxon Valor</h3>
+                        <p class="text-indigo-400 font-medium">Chief Synergy Officer</p>
+                        <p class="mt-2 text-gray-400 text-sm flex-grow">Jaxon leverages cross-functional paradigms to
+                            actionize our core value proposition, ensuring all stakeholders are aligned for maximum
+                            impact.</p>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div
+                        class="bg-gray-800 bg-opacity-50 rounded-xl p-6 text-center flex flex-col items-center border border-gray-700 shadow-xl">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-500 object-cover"
+                            src="https://i.pravatar.cc/300?u=blakecascade" alt="Photo of Blake Cascade"
+                            onerror="this.onerror=null;this.src='https://placehold.co/300x300/374151/FFFFFF?text=BC';">
+                        <h3 class="text-xl font-bold text-white">Blake Cascade</h3>
+                        <p class="text-indigo-400 font-medium">VP of Paradigm Disruption</p>
+                        <p class="mt-2 text-gray-400 text-sm flex-grow">Blake is a thought leader in the pre-revenue
+                            ideation space, specializing in thinking outside of boxes that have not yet been
+                            conceptualized.</p>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div
+                        class="bg-gray-800 bg-opacity-50 rounded-xl p-6 text-center flex flex-col items-center border border-gray-700 shadow-xl">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-500 object-cover"
+                            src="https://i.pravatar.cc/300?u=chloespectrum" alt="Photo of Chloe Spectrum"
+                            onerror="this.onerror=null;this.src='https://placehold.co/300x300/374151/FFFFFF?text=CS';">
+                        <h3 class="text-xl font-bold text-white">Chloe Spectrum</h3>
+                        <p class="text-indigo-400 font-medium">Director of Value-Added Ideation</p>
+                        <p class="mt-2 text-gray-400 text-sm flex-grow">Chloe’s team focuses on the meta-strategy of
+                            ideating about ideation, creating a perpetual motion machine of disruptive potential.</p>
+                    </div>
+                    <!-- Team Member 4 -->
+                    <div
+                        class="bg-gray-800 bg-opacity-50 rounded-xl p-6 text-center flex flex-col items-center border border-gray-700 shadow-xl">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-500 object-cover"
+                            src="https://i.pravatar.cc/300?u=kevin" alt="Photo of Kevin"
+                            onerror="this.onerror=null;this.src='https://placehold.co/300x300/374151/FFFFFF?text=K';">
+                        <h3 class="text-xl font-bold text-white">Kevin</h3>
+                        <p class="text-indigo-400 font-medium">Senior Strategic Advisor (CEO's Wife's Cousin's Friend's
+                            High School Teacher)</p>
+                        <p class="mt-2 text-gray-400 text-sm flex-grow">Kevin brings a wealth of experience from the
+                            volatile world of tenth-grade chemistry and is considered a key cultural asset.</p>
+                    </div>
+                </div>
+            </section>
         </div>
         <footer class="w-full text-center text-gray-500 text-sm mt-16 pb-4">
             <p>&copy; 2025 profitandego.com - Monetize Your Magnificence, one click at a time.</p>
     </div>
+
+    <!-- Terms of Service Modal -->
     <div id="tosModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <!-- Overlay -->
         <div id="tosOverlay" class="absolute inset-0 bg-black bg-opacity-75"></div>
+        <!-- Modal Content -->
         <div class="relative bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl p-8 border border-gray-600">
             <h2 class="text-3xl font-bold text-indigo-400 mb-6">Terms of Service</h2>
             <div class="text-left space-y-4 text-gray-300 max-h-[60vh] overflow-y-auto pr-4">
-                <p><strong class="text-gray-100">1. Valuation Mandate:</strong> By using this service, you agree to value
-                    yourself at least 150% more than your peers, both real and imagined. This valuation is non-negotiable
-                    and must be reflected in all future self-assessments.</p>
+                <p><strong class="text-gray-100">1. Valuation Mandate:</strong> By using this service, you agree to
+                    value yourself at least 150% more than your peers, both real and imagined. This valuation is
+                    non-negotiable and must be reflected in all future self-assessments.</p>
                 <p><strong class="text-gray-100">2. Intellectual Property:</strong> All compliments, affirmations, and
                     ego-centric validations ("the Assets") are the intellectual property of Profit & Ego, Inc. You are
-                    granted a non-exclusive, revocable license to leverage these Assets with appropriate corporate jargon in
-                    perpetuity.</p>
-                <p><strong class="text-gray-100">3. Synergy Clause:</strong> You acknowledge that all interactions with this
-                    platform contribute to a collective synergy pool. We reserve the right to repurpose this synergy for
-                    other, more important egos without notice.</p>
-                <p><strong class="text-gray-100">4. Disruption Disclaimer:</strong> This service is provided "as is." We are
-                    not liable for any paradigms shifted, boxes thought outside of, or disruptions caused to the status quo
-                    as a result of your enhanced ego.</p>
+                    granted a non-exclusive, revocable license to leverage these Assets with appropriate corporate
+                    jargon in perpetuity.</p>
+                <p><strong class="text-gray-100">3. Synergy Clause:</strong> You acknowledge that all interactions with
+                    this platform contribute to a collective synergy pool. We reserve the right to repurpose this
+                    synergy for other, more important egos without notice.</p>
+                <p><strong class="text-gray-100">4. Disruption Disclaimer:</strong> This service is provided "as is." We
+                    are not liable for any paradigms shifted, boxes thought outside of, or disruptions caused to the
+                    status quo as a result of your enhanced ego.</p>
             </div>
             <button id="closeModalButton"
                 class="mt-8 w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-500">I Have
                 Synergized</button>
         </div>
     </div>
-    
     <script data-cfasync="false" src="script.js" defer></script>
 </body>
 

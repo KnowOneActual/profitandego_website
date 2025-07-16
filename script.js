@@ -4,7 +4,11 @@ const validateButton = document.getElementById("validateButton"),
     tosLink = document.getElementById("tosLink"),
     tosModal = document.getElementById("tosModal"),
     tosOverlay = document.getElementById("tosOverlay"),
-    closeModalButton = document.getElementById("closeModalButton");
+    closeModalButton = document.getElementById("closeModalButton"),
+    socialShareContainer = document.getElementById("socialShareContainer"),
+    shareTwitter = document.getElementById("shareTwitter"),
+    shareLinkedIn = document.getElementById("shareLinkedIn");
+
 let hasBeenClicked = !1,
     isAnimating = !1;
 const loadingMessages = ["Synergizing compliments...", "Leveraging linguistic assets...", "Compiling ego-centric data...", "Optimizing validation matrix...", "Actualizing self-worth...", "Unpacking core competencies...", "Pivoting to praise..."],
@@ -44,6 +48,23 @@ function switchText(e, t) {
         complimentText.textContent = e, complimentText.classList.add("is-visible"), t && setTimeout(t, 400)
     }), 450)
 }
+
+function updateShareLinks(compliment) {
+    const encodedCompliment = encodeURIComponent(compliment);
+    const siteUrl = "https://profitandego.com";
+    const shareText = `My ego has been validated by Ego as a Service: "${encodedCompliment}"`;
+
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${siteUrl}`;
+    shareTwitter.href = twitterUrl;
+
+    const linkedInUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${siteUrl}&title=Ego%20Validation&summary=${shareText}&source=${siteUrl}`;
+    shareLinkedIn.href = linkedInUrl;
+    
+    if (!socialShareContainer.classList.contains("is-visible")) {
+        socialShareContainer.classList.add("is-visible");
+    }
+}
+
 tosLink.addEventListener("click", (e => {
     e.preventDefault(), openModal()
 })), closeModalButton.addEventListener("click", closeModal), tosOverlay.addEventListener("click", closeModal), tosCheckbox.addEventListener("change", (() => {
@@ -57,7 +78,8 @@ tosLink.addEventListener("click", (e => {
         setTimeout((() => {
             switchText(t, (() => {
                 isAnimating = !1
-            }))
+            }));
+            updateShareLinks(t); // Update links with the new compliment
         }), 1800)
     })), hasBeenClicked || (validateButton.textContent = "Validate Me Again", hasBeenClicked = !0)
 }));

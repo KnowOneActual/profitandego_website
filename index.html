@@ -36,6 +36,17 @@
             opacity: 1;
         }
 
+        #socialShareContainer {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            visibility: hidden;
+        }
+
+        #socialShareContainer.is-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
         @keyframes gradient-animation {
             0% {
                 background-position: 0 50%
@@ -94,6 +105,18 @@
             <div id="complimentContainer" class="min-h-[100px] flex items-center justify-center p-4">
                 <p id="complimentText" class="text-2xl sm:text-3xl font-medium text-gray-200"></p>
             </div>
+
+            <div id="socialShareContainer" class="mt-4 space-x-4">
+                <a id="shareTwitter" href="#" target="_blank"
+                    class="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Share on X
+                </a>
+                <a id="shareLinkedIn" href="#" target="_blank"
+                    class="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Share on LinkedIn
+                </a>
+            </div>
+
             <div class="my-12"></div>
             <section id="pricing-tiers">
                 <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-200">Choose Your Validation Velocity
@@ -182,12 +205,10 @@
                 </div>
             </section>
 
-            <!-- Meet the Team Section -->
             <section id="meet-the-team" class="my-16 pt-12 border-t border-gray-700">
                 <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-200">Meet the Visionaries</h2>
                 <p class="mt-2 text-md sm:text-lg text-gray-400">The minds behind the magnificence.</p>
                 <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-                    <!-- Team Member 1 -->
                     <div
                         class="bg-gray-800 bg-opacity-50 rounded-xl p-6 text-center flex flex-col items-center border border-gray-700 shadow-xl">
                         <img class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-500 object-cover"
@@ -199,7 +220,6 @@
                             actionize our core value proposition, ensuring all stakeholders are aligned for maximum
                             impact.</p>
                     </div>
-                    <!-- Team Member 2 -->
                     <div
                         class="bg-gray-800 bg-opacity-50 rounded-xl p-6 text-center flex flex-col items-center border border-gray-700 shadow-xl">
                         <img class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-500 object-cover"
@@ -211,7 +231,6 @@
                             ideation space, specializing in thinking outside of boxes that have not yet been
                             conceptualized.</p>
                     </div>
-                    <!-- Team Member 3 -->
                     <div
                         class="bg-gray-800 bg-opacity-50 rounded-xl p-6 text-center flex flex-col items-center border border-gray-700 shadow-xl">
                         <img class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-500 object-cover"
@@ -222,7 +241,6 @@
                         <p class="mt-2 text-gray-400 text-sm flex-grow">Chloe’s team focuses on the meta-strategy of
                             ideating about ideation, creating a perpetual motion machine of disruptive potential.</p>
                     </div>
-                    <!-- Team Member 4 -->
                     <div
                         class="bg-gray-800 bg-opacity-50 rounded-xl p-6 text-center flex flex-col items-center border border-gray-700 shadow-xl">
                         <img class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-500 object-cover"
@@ -241,11 +259,8 @@
             <p>&copy; 2025 profitandego.com - Monetize Your Magnificence, one click at a time.</p>
     </div>
 
-    <!-- Terms of Service Modal -->
     <div id="tosModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
-        <!-- Overlay -->
         <div id="tosOverlay" class="absolute inset-0 bg-black bg-opacity-75"></div>
-        <!-- Modal Content -->
         <div class="relative bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl p-8 border border-gray-600">
             <h2 class="text-3xl font-bold text-indigo-400 mb-6">Terms of Service</h2>
             <div class="text-left space-y-4 text-gray-300 max-h-[60vh] overflow-y-auto pr-4">

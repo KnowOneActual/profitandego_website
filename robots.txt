@@ -33,3 +33,5 @@ Disallow: /cgi-bin/
 Disallow: /lp
 Disallow: /feedback
 Disallow: /langtest
+
+Sitemap: https://www.profitandego.comsitemap.xml

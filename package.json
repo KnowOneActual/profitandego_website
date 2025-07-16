@@ -21,9 +21,7 @@
   },
   "homepage": "https://github.com/KnowOneActual/profitandego_website#readme",
   "devDependencies": {
+    "caniuse-lite": "^1.0.30001727",
     "tailwindcss": "^3.4.4"
-  },
-  "dependencies": {
-    "caniuse-lite": "^1.0.30001727"
   }
 }

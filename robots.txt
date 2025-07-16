@@ -28,5 +28,8 @@ User-agent: psbot
 Disallow: /
 User-agent: *
 Disallow: 
-Crawl-delay: 120
+Crawl-delay: 60
 Disallow: /cgi-bin/
+Disallow: /lp
+Disallow: /feedback
+Disallow: /langtest

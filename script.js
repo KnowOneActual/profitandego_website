@@ -33,45 +33,42 @@ const compliments = [
     "They don't see your genius yet. Give them time."
 ];
 
-// --- The Main Function ---
+// This function handles the fade-out, text change, and fade-in
+function switchText(newText) {
+    // Start by ensuring the text is faded out
+    complimentText.classList.remove('is-visible');
+
+    // Wait for the fade-out to complete
+    setTimeout(() => {
+        // Change the content while it's invisible
+        complimentText.textContent = newText;
+        // Add the class to trigger the fade-in
+        complimentText.classList.add('is-visible');
+    }, 450); // Delay must be slightly longer than the CSS transition
+}
+
+// --- The Main Event Listener ---
 validateButton.addEventListener('click', () => {
     if (isAnimating) {
-        return; // Exit if animation is already running
+        return;
     }
     isAnimating = true;
 
-    // 1. Select random messages
+    // Select random messages
     const randomLoadingMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
 
-    // 2. Start by fading out
-    complimentText.classList.remove('fade-in');
-    complimentText.classList.add('fade-out');
+    // 1. Show the loading message first
+    switchText(randomLoadingMessage);
 
-    // 3. After fade-out, show loading message
+    // 2. After a delay, show the final compliment
     setTimeout(() => {
-        complimentText.textContent = randomLoadingMessage;
-        complimentText.classList.remove('fade-out');
-        complimentText.classList.add('fade-in');
+        switchText(randomCompliment);
+        // Allow the button to be clicked again
+        isAnimating = false;
+    }, 2500); // How long before the final compliment appears
 
-        // 4. After loading message is visible, fade it out
-        setTimeout(() => {
-            complimentText.classList.remove('fade-in');
-            complimentText.classList.add('fade-out');
-
-            // 5. After fade-out, show final compliment
-            setTimeout(() => {
-                complimentText.textContent = randomCompliment;
-                complimentText.classList.remove('fade-out');
-                complimentText.classList.add('fade-in');
-                isAnimating = false; // Animation complete
-            }, 500); // Must match CSS transition time
-
-        }, 2000); // How long loading message is visible
-
-    }, 500); // Must match CSS transition time
-
-    // 6. Update button text only on the first click
+    // Update button text on the first click
     if (!hasBeenClicked) {
         validateButton.textContent = 'Validate Me Again';
         hasBeenClicked = true;

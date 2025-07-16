@@ -40,32 +40,40 @@ validateButton.addEventListener('click', () => {
     }
     isAnimating = true;
 
-    // 1. Select messages
+    // --- Select random messages ---
     const randomLoadingMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
 
-    // 2. Fade out
-    complimentText.style.opacity = '0';
+    // --- Animation Sequence ---
 
-    // 3. After fade out, show loading message and fade in
+    // 1. Fade out the initial text
+    complimentText.classList.remove('fade-in');
+    complimentText.classList.add('fade-out');
+
+    // 2. After fade-out, change text to loading message and fade in
     setTimeout(() => {
         complimentText.textContent = randomLoadingMessage;
-        complimentText.style.opacity = '1';
-    }, 400); // This delay should match the CSS transition time
+        complimentText.classList.remove('fade-out');
+        complimentText.classList.add('fade-in');
 
-    // 4. After a pause, fade out the loading message
-    setTimeout(() => {
-        complimentText.style.opacity = '0';
-    }, 2400); // 2-second pause (400ms + 2000ms)
+        // 3. After loading message is visible, fade it out
+        setTimeout(() => {
+            complimentText.classList.remove('fade-in');
+            complimentText.classList.add('fade-out');
 
-    // 5. After fade out, show final compliment and fade in
-    setTimeout(() => {
-        complimentText.textContent = randomCompliment;
-        complimentText.style.opacity = '1';
-        isAnimating = false; // Animation is complete
-    }, 2800); // Must be after the previous timeout (2400ms + 400ms)
+            // 4. After fade-out, change text to final compliment and fade in
+            setTimeout(() => {
+                complimentText.textContent = randomCompliment;
+                complimentText.classList.remove('fade-out');
+                complimentText.classList.add('fade-in');
+                isAnimating = false; // Animation is complete
+            }, 500); // Wait for fade out
 
-    // 6. Update button text only on the first click
+        }, 2000); // How long the loading message stays visible
+
+    }, 500); // Wait for initial fade out
+
+    // --- Update button text ---
     if (!hasBeenClicked) {
         validateButton.textContent = 'Validate Me Again';
         hasBeenClicked = true;

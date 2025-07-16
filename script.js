@@ -1,6 +1,11 @@
 // --- DOM Elements ---
 const validateButton = document.getElementById('validateButton');
 const complimentText = document.getElementById('complimentText');
+const tosCheckbox = document.getElementById('tosCheckbox');
+const tosLink = document.getElementById('tosLink');
+const tosModal = document.getElementById('tosModal');
+const tosOverlay = document.getElementById('tosOverlay');
+const closeModalButton = document.getElementById('closeModalButton');
 
 // --- State Variables ---
 let hasBeenClicked = false;
@@ -33,50 +38,64 @@ const compliments = [
     "They don't see your genius yet. Give them time."
 ];
 
-// This function handles the fade-out, text change, and fade-in
-function switchText(newText, callback) {
-    // Start by ensuring the text is faded out
-    complimentText.classList.remove('is-visible');
+// --- Modal Functions ---
+function openModal() {
+    tosModal.classList.remove('hidden');
+}
 
-    // Wait for the fade-out to complete
+function closeModal() {
+    tosModal.classList.add('hidden');
+}
+
+tosLink.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevents the link from trying to navigate
+    openModal();
+});
+
+closeModalButton.addEventListener('click', closeModal);
+tosOverlay.addEventListener('click', closeModal);
+
+// --- Checkbox Logic ---
+tosCheckbox.addEventListener('change', () => {
+    if (tosCheckbox.checked) {
+        validateButton.disabled = false;
+        validateButton.classList.remove('opacity-50', 'cursor-not-allowed');
+    } else {
+        validateButton.disabled = true;
+        validateButton.classList.add('opacity-50', 'cursor-not-allowed');
+    }
+});
+
+
+// --- Compliment Animation Functions ---
+function switchText(newText, callback) {
+    complimentText.classList.remove('is-visible');
     setTimeout(() => {
-        // Change the content while it's invisible
         complimentText.textContent = newText;
-        // Add the class to trigger the fade-in
         complimentText.classList.add('is-visible');
-        
-        // If there's a callback function, run it after the fade-in is complete
         if (callback) {
             setTimeout(callback, 400);
         }
-    }, 450); // Delay must be slightly longer than the CSS transition
+    }, 450);
 }
 
-// --- The Main Event Listener ---
 validateButton.addEventListener('click', () => {
     if (isAnimating) {
         return;
     }
     isAnimating = true;
 
-    // Select random messages
     const randomLoadingMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
 
-    // 1. Show the loading message
     switchText(randomLoadingMessage, () => {
-        // 2. This part runs after the loading message has appeared.
-        // Wait a bit, then switch to the final compliment.
         setTimeout(() => {
             switchText(randomCompliment, () => {
-                // 3. This part runs after the final compliment appears.
-                // The full animation is done, so we can allow clicks again.
                 isAnimating = false;
             });
-        }, 1800); // How long the loading message stays visible
+        }, 1800);
     });
 
-    // Update button text on the first click
     if (!hasBeenClicked) {
         validateButton.textContent = 'Validate Me Again';
         hasBeenClicked = true;

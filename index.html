@@ -77,9 +77,15 @@
                 <p class="mt-4 text-lg sm:text-xl text-gray-400">Because you're not just a professional, you're a
                     paradigm shift.</p>
             </header>
-            <div class="my-10">
-                <button id="validateButton"
-                    class="w-full sm:w-auto bg-indigo-600 text-white font-bold text-lg sm:text-xl rounded-lg px-10 py-4 shadow-lg hover:bg-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300 transform hover:scale-105">Validate
+            <div class="my-10 space-y-6">
+                <div class="flex justify-center items-center space-x-2">
+                    <input type="checkbox" id="tosCheckbox"
+                        class="h-5 w-5 rounded text-indigo-600 focus:ring-indigo-500 border-gray-300 bg-gray-700">
+                    <label for="tosCheckbox" class="text-gray-400">I have reviewed and synergized with the <a href="#" id="tosLink"
+                            class="text-indigo-400 hover:underline">Terms of Service</a>.</label>
+                </div>
+                <button id="validateButton" disabled
+                    class="w-full sm:w-auto bg-indigo-600 text-white font-bold text-lg sm:text-xl rounded-lg px-10 py-4 shadow-lg transition-all duration-300 transform hover:scale-105 opacity-50 cursor-not-allowed">Validate
                     Me</button>
             </div>
             <div id="complimentContainer" class="min-h-[100px] flex items-center justify-center p-4">
@@ -176,6 +182,31 @@
         <footer class="w-full text-center text-gray-500 text-sm mt-16 pb-4">
             <p>&copy; 2025 profitandego.com - Monetize Your Magnificence, one click at a time.</p>
     </div>
+    <div id="tosModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div id="tosOverlay" class="absolute inset-0 bg-black bg-opacity-75"></div>
+        <div class="relative bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl p-8 border border-gray-600">
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6">Terms of Service</h2>
+            <div class="text-left space-y-4 text-gray-300 max-h-[60vh] overflow-y-auto pr-4">
+                <p><strong class="text-gray-100">1. Valuation Mandate:</strong> By using this service, you agree to value
+                    yourself at least 150% more than your peers, both real and imagined. This valuation is non-negotiable
+                    and must be reflected in all future self-assessments.</p>
+                <p><strong class="text-gray-100">2. Intellectual Property:</strong> All compliments, affirmations, and
+                    ego-centric validations ("the Assets") are the intellectual property of Profit & Ego, Inc. You are
+                    granted a non-exclusive, revocable license to leverage these Assets with appropriate corporate jargon in
+                    perpetuity.</p>
+                <p><strong class="text-gray-100">3. Synergy Clause:</strong> You acknowledge that all interactions with this
+                    platform contribute to a collective synergy pool. We reserve the right to repurpose this synergy for
+                    other, more important egos without notice.</p>
+                <p><strong class="text-gray-100">4. Disruption Disclaimer:</strong> This service is provided "as is." We are
+                    not liable for any paradigms shifted, boxes thought outside of, or disruptions caused to the status quo
+                    as a result of your enhanced ego.</p>
+            </div>
+            <button id="closeModalButton"
+                class="mt-8 w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-500">I Have
+                Synergized</button>
+        </div>
+    </div>
+    
     <script data-cfasync="false" src="script.js" defer></script>
 </body>
 

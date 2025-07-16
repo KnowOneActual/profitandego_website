@@ -20,56 +20,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <style>
-        .fade-out {
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+<style>
+    body {
+        font-family: Inter, sans-serif
+    }
+
+    #complimentText {
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0 50%
         }
 
-        .fade-in {
-            opacity: 1;
-            transition: opacity 0.3s ease-in-out;
-        }
-        body {
-            font-family: Inter, sans-serif
+        50% {
+            background-position: 100% 50%
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px)
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0)
-            }
+        100% {
+            background-position: 0 50%
         }
+    }
 
-        .compliment-animation {
-            animation: fadeIn .5s ease-in-out forwards
-        }
-
-        @keyframes gradient-animation {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        .animated-gradient {
-            background: linear-gradient(-45deg, #1f2937, #374151, #111827, #4b5563);
-            background-size: 400% 400%;
-            animation: gradient-animation 15s ease infinite
-        }
-    </style>
+    .animated-gradient {
+        background: linear-gradient(-45deg, #1f2937, #374151, #111827, #4b5563);
+        background-size: 400% 400%;
+        animation: gradient-animation 15s ease infinite
+    }
+</style>
 </head>
 
 <body class="animated-gradient text-white">

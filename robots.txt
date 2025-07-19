@@ -34,4 +34,4 @@ Disallow: /lp
 Disallow: /feedback
 Disallow: /langtest
 
-Sitemap: https://www.profitandego.comsitemap.xml
+Sitemap: https://www.profitandego.com/sitemap.xml

@@ -1,0 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+# /.well-known/security.txt
+Contact: mailto:chief.synergy.officer@profitandego.com
+Expires: 2026-12-31T23:59:59Z
+Preferred-Languages: en, buzzword-iso-9001
+Canonical: https://profitandego.com/.well-known/security.txt
+Policy: https://profitandego.com/security-acknowledgements.html
+Hiring: mailto:vp.of.paradigm.disruption@profitandego.com
+Acknowledgments: https://profitandego.com/security-acknowledgements.html
+
+# Our security policy is simple: if you can hack us, you're either a wizard 
+# or you've successfully leveraged a paradigm shift in vulnerability research. 
+# Either way, we're impressed. Please report any findings to our Chief 
+# Synergy Officer, who will circle back with you after actionizing a deep-dive 
+# into your core competencies. We believe in proactive disruption, especially 
+# when it comes to our own infrastructure. All valid reports will be rewarded 
+# with a personalized, buzzword-filled compliment and a 
+# "I Disrupted the Status Quo" website badge.
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQSSHgoq1vOkJHRYyfbDaqhmFAZrOQUCaHwXMwAKCRDDaqhmFAZr
+ObaCAQDBwf4+k1F9zVBMxN1jwLYTxlvBm+df5U7bbekA72ffuwEAovDdqSL5ZauL
+QK/LjNbePfqKn0Cu4nlvVqusF8fX/go=
+=Allq
+-----END PGP SIGNATURE-----

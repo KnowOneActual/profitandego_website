@@ -1,24 +1,16 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#          RECOMMENDED .mega-linter.yml FOR YOUR BLOG
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# Don't fail the build for warnings, only for errors.
 # This makes the output less noisy while you're fixing things.
 FAIL_ON_WARNING: false
 
-# Let's start by disabling automatic fixes. You can enable this later
-# by setting it to 'true' once you're comfortable.
+
 APPLY_FIXES: true
 
 # This is a big one for performance. It tells MegaLinter to only
-# check files that have changed in a pull request. For pushes to 'main',
-# it will still check everything.
+# check files that have changed in a pull request. 
 VALIDATE_ALL_CODEBASE: false
 
-# Let's disable the linters that are causing the most noise right now.
 # You can remove these lines later as you fix the issues.
 DISABLE_LINTERS:
-  - REPOSITORY_DEVSKIM   # Very noisy security linter, can be tuned later
+  #- REPOSITORY_DEVSKIM   # Very noisy security linter, can be tuned later
   - REPOSITORY_KICS      # Another security linter
   - REPOSITORY_CHECKOV   # And another one
   #- HTML_DJLINT          # You already have htmlhint, one is enough for now

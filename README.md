@@ -2,7 +2,8 @@
 <p align="center">
   <img src="img/favicon/favicon.svg" alt="Profit and Ego Logo" width="300">
 </p>
-# profitandego.com
+
+# ** Profit and Ego Website Files profitandego.com**
 
 ![A+ Security Grade](https://img.shields.io/badge/Security_Headers-A%2B-brightgreen?style=for-the-badge&logo=cloudflare)
 ![Lighthouse Performance](https://img.shields.io/badge/Lighthouse-96%25-blueviolet?style=for-the-badge&logo=lighthouse)

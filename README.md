@@ -1,5 +1,6 @@
+<br>
 <p align="center">
-  <img src="img/favicon/favicon.svg" alt="Profit and Ego Logo" width="400">
+  <img src="img/favicon/favicon.svg" alt="Profit and Ego Logo" width="300">
 </p>
 # profitandego.com
 

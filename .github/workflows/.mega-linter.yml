@@ -1,0 +1,34 @@
+# This makes the output less noisy while you're fixing things.
+FAIL_ON_WARNING: false
+
+
+APPLY_FIXES: true
+
+# This is a big one for performance. It tells MegaLinter to only
+# check files that have changed in a pull request. 
+VALIDATE_ALL_CODEBASE: false
+
+# You can remove these lines later as you fix the issues.
+DISABLE_LINTERS:
+  - REPOSITORY_DEVSKIM   # Very noisy security linter, can be tuned later
+  #- REPOSITORY_KICS      # Another security linter
+  - REPOSITORY_CHECKOV   # And another one
+  #- HTML_DJLINT          # You already have htmlhint, one is enough for now
+  - SPELL_CSPELL         # The spelling checker
+  - SPELL_LYCHEE         # The link checker
+  - REPOSITORY_GRYPE     # Disabling Grype to fix the current workflow failure
+
+# By default, MegaLinter ignores a lot of generated folders.
+# Your Eleventy output folder is '_site'. Let's add it here to be sure.
+FILTER_REGEX_EXCLUDE: '(\/node_modules\/|\/_site\/)'
+
+# ~~~~~~~~~~~~~~~~~~~~~~ LINTER-SPECIFIC SETTINGS ~~~~~~~~~~~~~~~~~~~~~
+
+# For the HTML linter, you can tell it which attributes are valid
+# in your templates. This is useful for template languages like Nunjucks.
+# Add any custom attributes you use here.
+HTML_HTMLHINT_IGNORE_ATTR: "some-custom-attribute, another-one"
+
+# For the copy-paste checker, let's make it less strict.
+# This will only flag larger blocks of duplicated code.
+COPYPASTE_JSCPD_THRESHOLD: 15

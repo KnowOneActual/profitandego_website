@@ -1,13 +1,14 @@
 <br>
-<p align="center">
+<div align="center">
   <img src="img/favicon/favicon.svg" alt="Profit and Ego Logo" width="300">
 </p>
 
-# ** Profit and Ego Website Files profitandego.com**
+ **Profit and Ego Website Files profitandego.com**
 
 ![A+ Security Grade](https://img.shields.io/badge/Security_Headers-A%2B-brightgreen?style=for-the-badge&logo=cloudflare)
 ![Lighthouse Performance](https://img.shields.io/badge/Lighthouse-96%25-blueviolet?style=for-the-badge&logo=lighthouse)
 ![Built with Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+</div>
 
 Welcome to the official repository for [profitandego.com](https://profitandego.com)!
 
